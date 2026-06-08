@@ -1,8 +1,26 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Page.css";
 import "./WeatherNowPage.css";
 
+function formatTime(date) {
+  return date.toLocaleTimeString("es-CO", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+}
+
 export default function WeatherNowPage() {
+  const [time, setTime] = useState(formatTime(new Date()));
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTime(formatTime(new Date()));
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main>
       <section className="page-section weathernow-page">
@@ -15,7 +33,7 @@ export default function WeatherNowPage() {
             <div className="weathernow-panel__top">
               <div>
                 <span className="weathernow-panel__location">Medellín, CO</span>
-                <span className="weathernow-panel__time">Hoy • 18:15</span>
+                <span className="weathernow-panel__time">Hoy • {time}</span>
               </div>
               <span className="weathernow-panel__tag">Español</span>
             </div>

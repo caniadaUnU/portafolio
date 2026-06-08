@@ -12,8 +12,28 @@ export default function ProjectCard({
 }) {
   const isInternalDemo = demoUrl?.startsWith("/");
 
+  const handleCardClick = () => {
+    if (!repositoryUrl) return;
+    window.open(repositoryUrl, "_blank", "noopener,noreferrer");
+  };
+
+  const handleCardKeyDown = (event) => {
+    if (!repositoryUrl) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      window.open(repositoryUrl, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
-    <article className="project-card">
+    <article
+      className="project-card"
+      role={repositoryUrl ? "link" : undefined}
+      tabIndex={repositoryUrl ? 0 : undefined}
+      onClick={handleCardClick}
+      onKeyDown={handleCardKeyDown}
+      aria-label={`Abrir GitHub de ${title}`}
+    >
       <div className="project-card__header">
         <div className="project-card__meta">
           <span className="project-card__category">{category}</span>
