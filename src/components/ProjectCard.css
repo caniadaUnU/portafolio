@@ -100,6 +100,65 @@
   color: var(--accent);
 }
 
+.project-card--weather {
+  position: relative;
+  background: radial-gradient(circle at top left, rgba(192, 255, 255, 0.15), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 20%),
+    linear-gradient(135deg, #081423 0%, #0c314f 55%, #143c5f 100%);
+  border-color: rgba(100, 220, 255, 0.35);
+  color: #e8f7ff;
+  overflow: hidden;
+}
+
+.project-card--weather::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px);
+  background-size: 30px 30px, 50px 50px;
+  background-position: 0 0, 15px 10px;
+  opacity: 0.35;
+  animation: rain-stars 12s linear infinite;
+  pointer-events: none;
+}
+
+.project-card--weather .project-card__title,
+.project-card--weather .project-card__description,
+.project-card--weather .project-card__tech,
+.project-card--weather .project-card__link {
+  color: #e8f7ff;
+}
+
+.project-card--weather .project-card__category {
+  background: rgba(56, 142, 255, 0.16);
+  color: #a9ecff;
+  border-color: rgba(56, 142, 255, 0.3);
+}
+
+.project-card--weather .project-card__level {
+  background: rgba(255, 191, 0, 0.12);
+  color: #fff1b8;
+  border-color: rgba(255, 191, 0, 0.22);
+}
+
+.project-card__special-note {
+  margin-top: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: rgba(232, 247, 255, 0.85);
+}
+
+@keyframes rain-stars {
+  from {
+    background-position: 0 0, 15px 10px;
+  }
+  to {
+    background-position: -30px 60px, 15px 100px;
+  }
+}
+
 .project-card__link--demo {
   color: var(--accent);
 }
