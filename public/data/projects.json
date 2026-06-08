@@ -6,7 +6,7 @@
     "level": "Académico",
     "description": "Aplicación para gestionar citas con componentes reutilizables, estado local y consumo de API REST simulada con JSON Server.",
     "technologies": ["React", "Vite", "CSS", "JSON Server"],
-    "repositoryUrl": "https://github.com/caniadaUnU",
+    "repositoryUrl": "https://github.com/caniadaUnU/proyectos-copia.git",
     "demoUrl": ""
   },
   {
@@ -16,7 +16,7 @@
     "level": "Académico",
     "description": "Carrito de compras interactivo con manejo de cantidades, cálculo de totales y persistencia en localStorage.",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "repositoryUrl": "https://github.com/caniadaUnU",
+    "repositoryUrl": "https://github.com/caniadaUnU/proyectos-copia.git",
     "demoUrl": ""
   },
   {
@@ -26,7 +26,7 @@
     "level": "Personal",
     "description": "Aplicación del clima con interfaz en español. Consume la API de OpenWeatherMap y muestra temperatura, humedad y pronóstico a 5 días.",
     "technologies": ["React", "Vite", "API REST", "CSS Modules"],
-    "repositoryUrl": "https://github.com/caniadaUnU",
+    "repositoryUrl": "https://github.com/caniadaUnU/proyectos-copia.git",
     "demoUrl": "/weathernow"
   },
   {
@@ -36,7 +36,7 @@
     "level": "Personal",
     "description": "Tablero tipo Kanban para organizar tareas por estado: pendiente, en progreso y completada. Drag & drop básico.",
     "technologies": ["React", "Vite", "CSS", "useState"],
-    "repositoryUrl": "https://github.com/caniadaUnU",
+    "repositoryUrl": "https://github.com/caniadaUnU/proyectos-copia.git",
     "demoUrl": ""
   },
   {
@@ -46,7 +46,7 @@
     "level": "Personal",
     "description": "Blog estático generado con HTML, CSS y JavaScript vanilla. Carga artículos desde un archivo JSON.",
     "technologies": ["JavaScript", "HTML", "CSS"],
-    "repositoryUrl": "https://github.com/caniadaUnU",
+    "repositoryUrl": "https://github.com/caniadaUnU/proyectos-copia.git",
     "demoUrl": ""
   }
 ]
