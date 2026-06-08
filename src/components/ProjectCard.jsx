@@ -60,6 +60,7 @@ export default function ProjectCard({
               rel="noopener noreferrer"
               className="project-card__link"
               aria-label={`Repositorio de ${title}`}
+              onClick={(event) => event.stopPropagation()}
             >
               GitHub
             </a>
@@ -70,6 +71,7 @@ export default function ProjectCard({
                 to={demoUrl}
                 className="project-card__link project-card__link--demo"
                 aria-label={`Demo de ${title}`}
+                onClick={(event) => event.stopPropagation()}
               >
                 Demo ↗
               </Link>
@@ -80,6 +82,7 @@ export default function ProjectCard({
                 rel="noopener noreferrer"
                 className="project-card__link project-card__link--demo"
                 aria-label={`Demo de ${title}`}
+                onClick={(event) => event.stopPropagation()}
               >
                 Demo ↗
               </a>
