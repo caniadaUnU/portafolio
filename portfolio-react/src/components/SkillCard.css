@@ -1,0 +1,84 @@
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1rem 1.2rem;
+  transition: border-color 0.2s;
+}
+
+.skill-card:hover {
+  border-color: rgba(99, 255, 200, 0.35);
+}
+
+.skill-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.skill-card__name {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.skill-card__type {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.04em;
+}
+
+.skill-card__type--frontend {
+  background: rgba(99, 200, 255, 0.15);
+  color: #63c8ff;
+}
+.skill-card__type--lenguaje {
+  background: rgba(255, 200, 99, 0.15);
+  color: #ffc863;
+}
+.skill-card__type--backend {
+  background: rgba(200, 99, 255, 0.15);
+  color: #c863ff;
+}
+.skill-card__type--herramienta {
+  background: rgba(99, 255, 200, 0.12);
+  color: var(--accent);
+}
+.skill-card__type--blanda {
+  background: rgba(255, 99, 140, 0.12);
+  color: #ff638c;
+}
+
+.skill-card__bar-bg {
+  width: 100%;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+}
+
+.skill-card__bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+.skill-card__level {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.skill-card__note {
+  margin-top: 0.35rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
