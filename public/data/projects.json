@@ -27,7 +27,7 @@
     "description": "Aplicación del clima con interfaz en español. Consume la API de OpenWeatherMap y muestra temperatura, humedad y pronóstico a 5 días.",
     "technologies": ["React", "Vite", "API REST", "CSS Modules"],
     "repositoryUrl": "https://github.com/usuario/weather-now",
-    "demoUrl": "https://weather-now-demo.vercel.app"
+    "demoUrl": "https://weather-now-demo.vercel.app/?lang=es"
   },
   {
     "id": "p4",

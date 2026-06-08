@@ -1,13 +1,16 @@
 import "./ProjectCard.css";
 
-export default function ProjectCard({ title, description, technologies, category, level, repositoryUrl, demoUrl }) {
-  const isWeatherNow = title === "WeatherNow";
-  const demoLink = isWeatherNow && demoUrl
-    ? `${demoUrl}${demoUrl.includes("?") ? "&" : "?"}lang=es`
-    : demoUrl;
-
+export default function ProjectCard({
+  title,
+  description,
+  technologies,
+  category,
+  level,
+  repositoryUrl,
+  demoUrl,
+}) {
   return (
-    <article className={`project-card ${isWeatherNow ? "project-card--weather" : ""}`}>
+    <article className="project-card">
       <div className="project-card__header">
         <div className="project-card__meta">
           <span className="project-card__category">{category}</span>
@@ -15,17 +18,14 @@ export default function ProjectCard({ title, description, technologies, category
         </div>
         <h3 className="project-card__title">{title}</h3>
         <p className="project-card__description">{description}</p>
-        {isWeatherNow && (
-          <p className="project-card__special-note">
-            Enlace de demo con idioma español por defecto y fondo con lluvia de estrellas.
-          </p>
-        )}
       </div>
 
       <div className="project-card__footer">
         <div className="project-card__techs">
           {technologies.map((tech) => (
-            <span key={tech} className="project-card__tech">{tech}</span>
+            <span key={tech} className="project-card__tech">
+              {tech}
+            </span>
           ))}
         </div>
 
@@ -43,13 +43,13 @@ export default function ProjectCard({ title, description, technologies, category
           )}
           {demoUrl && (
             <a
-              href={demoLink}
+              href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="project-card__link project-card__link--demo"
               aria-label={`Demo de ${title}`}
             >
-              Demo {isWeatherNow ? "(ES)" : ""} ↗
+              Demo ↗
             </a>
           )}
         </div>
