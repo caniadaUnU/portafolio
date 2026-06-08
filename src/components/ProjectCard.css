@@ -102,11 +102,7 @@
 
 .project-card--weather {
   position: relative;
-  background: radial-gradient(circle at top left, rgba(192, 255, 255, 0.15), transparent 25%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 20%),
-    linear-gradient(135deg, #081423 0%, #0c314f 55%, #143c5f 100%);
   border-color: rgba(100, 220, 255, 0.35);
-  color: #e8f7ff;
   overflow: hidden;
 }
 
@@ -115,11 +111,11 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px),
-    radial-gradient(circle, rgba(255,255,255,0.35) 1px, transparent 1px);
+    radial-gradient(circle, rgba(255,255,255,0.45) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.25) 1px, transparent 1px);
   background-size: 30px 30px, 50px 50px;
   background-position: 0 0, 15px 10px;
-  opacity: 0.35;
+  opacity: 0.18;
   animation: rain-stars 12s linear infinite;
   pointer-events: none;
 }
@@ -128,7 +124,7 @@
 .project-card--weather .project-card__description,
 .project-card--weather .project-card__tech,
 .project-card--weather .project-card__link {
-  color: #e8f7ff;
+  color: var(--text);
 }
 
 .project-card--weather .project-card__category {
@@ -147,7 +143,7 @@
   margin-top: 0.75rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.8rem;
-  color: rgba(232, 247, 255, 0.85);
+  color: var(--text-muted);
 }
 
 @keyframes rain-stars {

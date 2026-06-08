@@ -2,6 +2,9 @@ import "./ProjectCard.css";
 
 export default function ProjectCard({ title, description, technologies, category, level, repositoryUrl, demoUrl }) {
   const isWeatherNow = title === "WeatherNow";
+  const demoLink = isWeatherNow && demoUrl
+    ? `${demoUrl}${demoUrl.includes("?") ? "&" : "?"}lang=es`
+    : demoUrl;
 
   return (
     <article className={`project-card ${isWeatherNow ? "project-card--weather" : ""}`}>
@@ -14,7 +17,7 @@ export default function ProjectCard({ title, description, technologies, category
         <p className="project-card__description">{description}</p>
         {isWeatherNow && (
           <p className="project-card__special-note">
-            Interfaz en español con fondo animado estilo lluvia de estrellas.
+            Enlace de demo con idioma español por defecto y fondo con lluvia de estrellas.
           </p>
         )}
       </div>
@@ -40,13 +43,13 @@ export default function ProjectCard({ title, description, technologies, category
           )}
           {demoUrl && (
             <a
-              href={demoUrl}
+              href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
               className="project-card__link project-card__link--demo"
               aria-label={`Demo de ${title}`}
             >
-              Demo ↗
+              Demo {isWeatherNow ? "(ES)" : ""} ↗
             </a>
           )}
         </div>
