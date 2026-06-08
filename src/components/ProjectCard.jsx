@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ProjectCard.css";
 
 export default function ProjectCard({
@@ -9,6 +10,8 @@ export default function ProjectCard({
   repositoryUrl,
   demoUrl,
 }) {
+  const isInternalDemo = demoUrl?.startsWith("/");
+
   return (
     <article className="project-card">
       <div className="project-card__header">
@@ -41,17 +44,26 @@ export default function ProjectCard({
               GitHub
             </a>
           )}
-          {demoUrl && (
-            <a
-              href={demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card__link project-card__link--demo"
-              aria-label={`Demo de ${title}`}
-            >
-              Demo ↗
-            </a>
-          )}
+          {demoUrl &&
+            (isInternalDemo ? (
+              <Link
+                to={demoUrl}
+                className="project-card__link project-card__link--demo"
+                aria-label={`Demo de ${title}`}
+              >
+                Demo ↗
+              </Link>
+            ) : (
+              <a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card__link project-card__link--demo"
+                aria-label={`Demo de ${title}`}
+              >
+                Demo ↗
+              </a>
+            ))}
         </div>
       </div>
     </article>
